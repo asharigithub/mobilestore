@@ -1,0 +1,106 @@
+{%extends "nav.html"%}
+{%load static%}
+{%block nav%}
+ 
+<a href="{% url 'ch' %}">Customer home</a>
+ 
+<p>
+     
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+   add products here 
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table table-dark" >
+          {{form.as_table}}
+          <td>
+            <button class="bg-success">SUBMIT</button>
+        </td>
+        </table>
+        
+        </form>
+        
+    </div>
+  </div>
+  <div class="container" width="25rem" height="800px">
+    <div class="row"width="25rem" height="800px">
+  {% for i in data %}
+    
+        <div class="col-sm-4"width="25rem" height="900px">
+        <div class="card" width="300px" height="1000px">
+          {% if i.image %}
+          <img class="card-imgtop" src="{{i.image.url}}" alt="Card-image cap" width="300px" height="250px">
+          {% endif %}
+        <div class="card-body">
+        <h5 class="card-title">{{i.productname}}</h5><br>
+        <!-- <h7 class="card-title">{{i.price}}</h7><br>
+        <h7 class="card-title">{{i.discount_price}}</h7><br> -->
+
+        <h7 class="card-title">{{i.description}}</h7><br>
+        <h7 class="card-title">{{i.brand}}</h7><br>
+        <h7 class="card-title">{{i.rating}}</h7><br>
+        <div class="fw-bold text-danger">
+          Rs.{{i.discount_price}}/-
+          <small class="fw-light text-dark text-decoration-line-through">{{i.price}}</small>
+      </div>
+        
+    </div>
+    <div class="card-footer">
+      <a href="{% url 'epro' i.id%}" class="btn btn-warning">Edit</a>
+      <a href="{%url 'dpro' i.id %}" class="btn btn-danger">Delete</a>
+
+    </div>
+    
+    <!---->  
+    
+    <!---->
+  </div>
+</div>
+
+{% endfor %}
+
+</div>
+</div>
+    
+  
+
+<!--              
+                
+                  <div class="container" width="25rem" height="1000px">
+                    <div class="row">
+                  
+                    {% for i in data %}
+                    <div class="col-sm-4">
+                    <div class="card" width="300px" height="550px">
+                    <div class="col-text-center mb-4">
+                        <a href="#" class="btn">
+                    <img src="{{i.image.url}}" width="340px" height="350px">
+                    <div class="fw-bold">{{i.description}}</div>
+                    <div class="fw-bold">{{i.productname}}</div>
+                    
+                    
+
+                    <div class="fw-bold text-danger">
+                        Rs.{{i.discount_price}}/-
+                        <small class="fw-light text-dark text-decoration-line-through">{{i.price}}</small>
+                    </div>
+                </div>
+              </div>
+                <div class="card-footer">
+                    <a href="{% url 'epro' i.id%}" class="btn btn-warning">Edit</a>
+                    <a href="{%url 'dpro' i.id %}" class="btn btn-danger">Delete</a>
+              
+                  </div>
+            </a>
+          </div>  
+        </div>
+                    {% endfor %}
+                
+            </div>
+         </div> -->
+        
+
+{%endblock nav%}

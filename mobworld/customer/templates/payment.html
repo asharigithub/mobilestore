@@ -1,0 +1,54 @@
+{% extends "nav.html" %}
+
+{% block nav %}
+  <h1 class="bg-dark text-center text-dark">Payment Form</h1>
+  <form method="post">
+    <table>
+    {% csrf_token %}
+    {{ form.as_table }}
+  </table>
+    <button type="submit" class="btn btn-primary">Place Your Order</button>
+  </form>
+  <style>
+    /* Style the form */
+    form {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Style the form inputs */
+    input[type=text], input[type=email], input[type=tel], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+/* Style the form button */
+button[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Style the form button on hover */
+    button[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the form labels */
+    label {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+{% endblock %}

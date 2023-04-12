@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/static/css/home.css">
+<link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <title>MOBILE STORE</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+  <body>
+    <div class="container">
+        <div class="navbar-top">
+            <div class="social-link"> 
+
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="logo">
+              <h3>MOBILE WORLD</h3>
+            </div>
+            
+            
+        </div>
+    </div> 
+    <div class="main-content">
+        <nav class="navbar navbar-expand-md" id="navbar-color">
+            <!-- Brand -->
+            <div class="container">
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span><i><img src="/img/dheee.jpg" alt="" width="30px"></i></span>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'best'%}">Top selling</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    brand available
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Apple</a>
+                    <a class="dropdown-item" href="#">One-Plus</a>
+                    <a class="dropdown-item" href="#">Samsung</a>
+                    <a class="dropdown-item" href="#">Vivo</a>
+                    <a class="dropdown-item" href="#">Oppo</a>
+                    <a class="dropdown-item" href="#">Xiomi</a>
+    
+    
+    
+                  </div>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="{%url 'lg'%}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reg'%}">Registration</a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+          </nav>
+          
+
+          <div class="content">
+            <h1>Get Out and play!!!!.....
+             
+                <br> Own your latest one
+            </h1>
+            <p>Dream phone at Easy EMi’s...
+              Widest Choice and Best Offers Guaranteed..All brand under One Roof!</p>
+            <div class="btn1">
+                <a href="{%url 'lg'%}"><button a>Shop Now</button></a>
+            </div>
+
+          </div>
+
+
+
+    </div> 
+ 
+<!-- Background image --> 
+    <!-- Pills navs -->
+    {% if messages %}
+    {%for i in messages%}
+     {%if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <div class="alert alert-success alert-dismissible">
+     <button type="button" class="close" data-dismiss="alert">&times;</button>
+     {{i}}
+   </div>
+     {%endif %}
+     {%if i.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+   <div class="alert alert-danger alert-dismissible">
+     <button type="button" class="close" data-dismiss="alert">&times;</button>
+   {{i}}
+   </div>
+     {%endif %}
+    {%endfor%}
+    {%endif%}
+    <section style="background-color: #eee;">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+            <div class="card">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div
+                  class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 35px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="https://priceinsouthafrica.com/wp-content/uploads/2021/01/Vivo-Y31-Price-in-South-Africa-1536x1536.jpg"
+                class="card-img-top" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">VIVO</a></p>
+                  <p class="small text-danger"><s>21099</s></p>
+                </div>
+    
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">VIVO Y31</h5>
+                  <h5 class="text-dark mb-0">19999</h5>
+                </div>
+    
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+            <div class="card">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div
+                  class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 35px;">
+                  <p class="text-white mb-0 small">x2</p>
+                </div>
+              </div>
+              <img src="https://th.bing.com/th/id/R.79e3efc358fd3e59745f73eadfad0c80?rik=PSTjRKnEmx3SAg&riu=http%3a%2f%2ftechtography.com%2fwp-content%2fuploads%2f2017%2f01%2foppo-A39-small.jpg&ehk=dQaZHot90fWa87zFDGnwlrQ6AWkNpzPIxjiuNiD4fl8%3d&risl=&pid=ImgRaw&r=0"
+                class="card-img-top" alt="Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Oppo</a></p>
+                  <p class="small text-danger"><s>15000/-</s></p>
+                </div>
+    
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">OppoA39</h5>
+                  <h5 class="text-dark mb-0">13099/-</h5>
+                </div>
+    
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">7</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+            <div class="card">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div
+                  class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 35px;">
+                  <p class="text-white mb-0 small">x3</p>
+                </div>
+              </div>
+              <img src="https://i01.appmifile.com/webfile/globalweb/chenyang/K2-blue.png
+                class="card-img-top" alt="Gaming Laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Xiaomi</a></p>
+                  <p class="small text-danger"><s>14399</s></p>
+                </div>
+    
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">Xiaomi 11x pro</h5>
+                  <h5 class="text-dark mb-0">13299</h5>
+                </div>
+    
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">5</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background-color: #eee;">
+      <div class="container py-5">
+        <h4 class="text-center mb-5"><strong>Price Starting From</strong></h4>
+    
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+              <img src="https://i0.wp.com/kenyan.link/wp-content/uploads/2020/11/ezgif.com-gif-maker.jpg?fit=1200%2C800&ssl=1"
+                class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                  <div class="d-flex justify-content-start align-items-start h-100">
+                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">7000</span></h5>
+                  </div>
+                </div>
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+              <img src="https://www.droid-life.com/wp-content/uploads/2020/01/OnePlus-7T-6T-2-980x645.jpg"
+                class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                  <div class="d-flex justify-content-start align-items-start h-100">
+                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">8239</span></h5>
+                  </div>
+                </div>
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+              <img src="https://static.india.com/wp-content/uploads/2020/09/hmd-global.jpg"
+                class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                  <div class="d-flex justify-content-start align-items-start h-100">
+                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">9147</span></h5>
+                  </div>
+                </div>
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="bg-image hover-zoom ripple shadow-1-strong rounded ripple-surface">
+              <img src="https://th.bing.com/th/id/OIP.ANkRcaeqq3TePJmxnxHnGgHaE8?pid=ImgDet&rs=1"
+                class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                  <div class="d-flex justify-content-start align-items-start h-100">
+                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">8883</span></h5>
+                  </div>
+                </div>
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+              <img src="https://th.bing.com/th/id/OIP.6rxzxntJZXQDFEnkIXEDxwHaE8?pid=ImgDet&rs=1"
+                class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                  <div class="d-flex justify-content-start align-items-start h-100">
+                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">6106</span></h5>
+                  </div>
+                </div>
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+              <img src="https://www.cnet.com/a/img/resize/8b34cee7f1dfcdaefb11ba45ae4b98ea2d0358ae/2022/07/12/ed15dc82-eca4-4249-b8a3-558f8d6b26ee/nothing-phone-1-cnet-review-18.jpg?auto=webp&width=1200"
+                class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                  <div class="d-flex justify-content-start align-items-start h-100">
+                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">7958</span></h5>
+                  </div>
+                </div>
+                <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if messages %}
+    {%for i in messages%}
+     {%if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <div class="alert alert-success alert-dismissible">
+     <button type="button" class="close" data-dismiss="alert">&times;</button>
+     {{i}}
+   </div>
+     {%endif %}
+     {%if i.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+   <div class="alert alert-danger alert-dismissible">
+     <button type="button" class="close" data-dismiss="alert">&times;</button>
+   {{i}}
+   </div>
+     {%endif %}
+    {%endfor%}
+    {%endif%}
+ </body>
+</html>

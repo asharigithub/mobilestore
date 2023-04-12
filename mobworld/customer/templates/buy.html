@@ -1,0 +1,286 @@
+{% extends "nav.html" %}
+{%load static%}
+<link rel="stylesheet" href="{% static '/css/buy.css' %}">
+{% block nav %}
+  
+ 
+  <form method="post">
+    {% csrf_token %}
+    <div class="container py-4">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col">
+          <div class="card my-4 shadow-3">
+            <div class="row g-0">
+              <div class="col-xl-6 d-xl-block bg-image">
+                <img src="https://mdbcdn.b-cdn.net/img/Others/extended-example/delivery.webp" alt="Sample photo"
+                  class="img-fluid" />
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+                  <div class=" justify-content-center align-items-center h-100">
+                    <div class=" text-center" style="margin-top: 220px;">
+                      <i class="fas fa-truck text-white fa-3x"></i>
+                      <p class="text-white title-style">Mobile  World</p>
+                      <p class="text-white mb-0"></p>
+    
+                      <figure class="text-center mb-0">
+                        <blockquote class="blockquote text-white">
+                          <p class="pb-3">
+                            <i class="fas fa-quote-left fa-xs text-primary"
+                              style="color: hsl(210, 100%, 50%) ;"></i>
+                            <span class="lead font-italic">Everything at your doorstep.</span>
+                            <i class="fas fa-quote-right fa-xs text-primary"
+                              style="color: hsl(210, 100%, 50%) ;"></i>
+                          </p>
+                        </blockquote>
+    
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-4 text-uppercase">Delivery Info</h3>
+    
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1m">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1n">Last name</label>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example8">Address</label>
+                  </div>
+    
+    
+    
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+    
+                      <select class="select">
+                        <option value="1">State</option>
+                        <option value="2">Kerala</option>
+                        <option value="3">karnataka</option>
+                        <option value="4">Tamilnadu</option>
+                      </select>
+    
+                    </div>
+                    <div class="col-md-6 mb-4">
+    
+                      <select class="select">
+                        <option value="1">City</option>
+                        <option value="2">Calicut</option>
+                        <option value="3">Cochin</option>
+                        <option value="4">Trivandrum</option>
+                      </select>
+    
+                    </div>
+                  </div>
+    
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example3" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example3">Phone</label>
+                  </div>
+    
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example2" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example2">Email</label>
+                  </div>
+    
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="submit" class="btn btn-success btn-lg ms-2"
+                      style="background-color:hsl(210, 100%, 50%) ">Pay Now</button>
+                  </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <h1>Payment Form</h1>
+
+  <section class="gradient-custom">
+    <div class="container my-5 py-5">
+      <div class="row d-flex justify-content-center py-5">
+        <div class="col-md-7 col-lg-5 col-xl-4">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-4">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Payment Details
+                    </h3>
+                    <div class="checkbox pull-right">
+                        <label>
+                            <input type="checkbox" />
+                            Remember
+                        </label>
+                    </div>
+                </div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+   
+  <button type="button" class="btn btn-info btn-lg btn-rounded">
+   <a href="{% url 'ordersuccess' %}"> <i class="fas fa-arrow-right">Place Your Order</i></a>
+  </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+  
+  <style>
+    /* Form container */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Form input fields */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: #00b4d8;
+  box-shadow: 0 0 0 2px #e5f2f7;
+}
+
+/* Form button */
+.form-group button[type="submit"] {
+  background-color: #00b4d8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button[type="submit"]:hover {
+  background-color: #0096b3;
+}
+
+/* Heading */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.btn-primary {
+  background-color: #00b4d8;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0096b3;
+}
+
+.btn-warning {
+  background-color: #ffbf00;
+  color: #fff;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e6ac00;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+</style>
+{% endblock %}

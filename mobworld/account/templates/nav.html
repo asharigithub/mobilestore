@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="overlay"></div>
+
+    <div class="utility-nav d-none d-md-block">
+      <div class="container bg-info text-light">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p class="small"><i class="bx bx-envelope"></i> mobileworld@gmail.com | <i class="bx bx-phone"></i> +91-9526128486
+            </p>
+          </div>
+        
+    
+          <div class="col-12 col-md-6 text-right">
+            <p class="small ">Free shipping on total of Rs.10000 of all products</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow:none">
+      <div class="container">
+    
+        <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
+          <i class="bx bx-menu icon-single"></i>
+        </button>
+    
+        <a class="navbar-brand" href="#">
+          <h4 class="font-weight-bold">MobileWorld</h4>
+        </a>
+    
+        <ul class="navbar-nav ml-auto d-block d-md-none">
+          <li class="nav-item">
+            
+
+            <a class="btn btn-link" href="#"><i class="bx bxs-cart icon-single"><span class="material-symbols-outlined">3</span></i> </a>
+          </li>
+        </ul>
+    
+        <div class="collapse navbar-collapse">
+          <form class="form-inline my-2 my-lg-0 mx-auto">
+            <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">
+           <i> <span class="material-symbols-outlined">
+                search
+                </span></i></button>
+          </form>
+    
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                
+              <a class="btn btn-link" href="{% url 'mycart'%}"><i class="bx bxs-cart icon-single"><span class="material-symbols-outlined">
+                 shopping_cart_checkout 
+                </span></i> </a>
+            </li>
+            <li class="nav-item ml-md-3">
+                
+              <a class="btn btn-primary" href="#"><i><span class="material-symbols-outlined">
+                favorite
+                </span></i></a>
+            </li>
+          </ul>
+        </div>
+    
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light sub-menu">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{%url 'h' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            
+           
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                brand
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Apple</a>
+                <a class="dropdown-item" href="#">One-Plus</a>
+                <a class="dropdown-item" href="#">Samsung</a>
+                <a class="dropdown-item" href="#">Vivo</a>
+                <a class="dropdown-item" href="#">Oppo</a>
+                <a class="dropdown-item" href="#">Xiomi</a>
+
+
+
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'best'%}">Best selling</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'lgout' %}">LogOut</a>
+              </li>
+              
+          </ul>
+        </div>
+      </div>
+      
+    </nav>
+    {%block nav%}
+      
+    {%endblock nav%}
+  </body>
+</html>
+    
+   
