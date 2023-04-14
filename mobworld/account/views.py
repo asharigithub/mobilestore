@@ -27,9 +27,9 @@ class Reg(CreateView):
     def form_valid(self, form):
         mail=form.cleaned_data.get("email")
         send_mail(
-            "Around Me Registration",  #subject
+            "mobile world Registration",  #subject
             "hi user thank you for registering in mobilestore", #message
-            "asharikk99@gmail.com", 
+            "admin@gmail.com", 
             [mail]
         )
         messages.success(self.request,"registration Successsful")
